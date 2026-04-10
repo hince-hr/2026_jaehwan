@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>비바웨이브 2026년 1분기 인사평가 — 이재환님 업무 참고 내용</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --surface: #ffffff;
+    --surface-2: #f8f9fb;
+    --border: #e4e7ec;
+    --border-light: #eef0f4;
+    --text-primary: #1a1d23;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --accent-mid: #bfdbfe;
+    --tag-1-bg: #f0fdf4; --tag-1-text: #166534; --tag-1-border: #bbf7d0;
+    --tag-2-bg: #eff6ff; --tag-2-text: #1e40af; --tag-2-border: #bfdbfe;
+    --tag-3-bg: #fdf4ff; --tag-3-text: #6b21a8; --tag-3-border: #e9d5ff;
+    --tag-4-bg: #fff7ed; --tag-4-text: #9a3412; --tag-4-border: #fed7aa;
+    --tag-5-bg: #f0fdfa; --tag-5-text: #134e4a; --tag-5-border: #99f6e4;
+    --weight-bar: #2563eb;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 14px;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .page-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+
+  .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 24px 40px;
+  }
+
+  .header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    border: 1px solid var(--accent-mid);
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .header-label::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .header-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .header-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+
+  .header-notice {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 680px;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── OVERVIEW GRID ── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 700px) {
+    .overview-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 420px) {
+    .overview-grid { grid-template-columns: 1fr; }
+  }
+
+  .overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 14px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
+  }
+
+  .overview-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .overview-card.c1 { border-top: 3px solid #22c55e; }
+  .overview-card.c2 { border-top: 3px solid #3b82f6; }
+  .overview-card.c3 { border-top: 3px solid #a855f7; }
+  .overview-card.c4 { border-top: 3px solid #f97316; }
+  .overview-card.c5 { border-top: 3px solid #14b8a6; }
+
+  .ov-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+
+  .ov-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+
+  .ov-weight {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .c1 .ov-weight { color: #16a34a; }
+  .c2 .ov-weight { color: #2563eb; }
+  .c3 .ov-weight { color: #9333ea; }
+  .c4 .ov-weight { color: #ea580c; }
+  .c5 .ov-weight { color: #0d9488; }
+
+  .ov-collab {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── WEIGHT BAR ── */
+  .weight-bar-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin-bottom: 48px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .weight-bar-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .weight-bar-track {
+    display: flex;
+    height: 28px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    gap: 2px;
+  }
+
+  .weight-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .weight-seg:hover { opacity: 0.85; }
+  .ws1 { background: #22c55e; }
+  .ws2 { background: #3b82f6; }
+  .ws3 { background: #a855f7; }
+  .ws4 { background: #f97316; }
+  .ws5 { background: #14b8a6; }
+
+  .weight-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .wl-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .wl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ── PERFORMANCE CARDS ── */
+  .perf-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .perf-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .perf-card-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+
+  .perf-card-head:hover { background: var(--surface-2); }
+
+  .perf-badge {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .pb1 { background: #22c55e; }
+  .pb2 { background: #3b82f6; }
+  .pb3 { background: #a855f7; }
+  .pb4 { background: #f97316; }
+  .pb5 { background: #14b8a6; }
+
+  .perf-head-info { flex: 1; min-width: 0; }
+
+  .perf-head-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .perf-head-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .perf-weight-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid var(--accent-mid);
+  }
+
+  .perf-collab-tag {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .accordion-toggle {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: transform 0.25s, background 0.15s;
+  }
+
+  .perf-card.open .accordion-toggle {
+    transform: rotate(180deg);
+    background: var(--accent-light);
+    color: var(--accent);
+    border-color: var(--accent-mid);
+  }
+
+  .perf-card-body {
+    display: none;
+    padding: 24px;
+  }
+
+  .perf-card.open .perf-card-body { display: block; }
+
+  /* ── CONTENT BLOCKS ── */
+  .content-block {
+    background: var(--surface-2);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    white-space: pre-wrap;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: var(--text-primary);
+  }
+
+  .content-block:last-child { margin-bottom: 0; }
+
+  .content-block-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+
+  /* ── COLLAB SECTION ── */
+  .collab-section {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .collab-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .collab-chip {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid var(--accent-mid);
+  }
+
+  /* ── SUMMARY TABLE ── */
+  .summary-table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    background: var(--surface-2);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 13px;
+    color: var(--text-primary);
+    vertical-align: top;
+    line-height: 1.65;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--surface-2); }
+
+  .td-title { font-weight: 600; }
+  .td-weight { font-weight: 700; color: var(--accent); text-align: center; }
+  .td-collab { color: var(--text-secondary); }
+
+  /* ── TAG COLORS ── */
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+  }
+  .t1 { background: var(--tag-1-bg); color: var(--tag-1-text); border: 1px solid var(--tag-1-border); }
+  .t2 { background: var(--tag-2-bg); color: var(--tag-2-text); border: 1px solid var(--tag-2-border); }
+  .t3 { background: var(--tag-3-bg); color: var(--tag-3-text); border: 1px solid var(--tag-3-border); }
+  .t4 { background: var(--tag-4-bg); color: var(--tag-4-text); border: 1px solid var(--tag-4-border); }
+  .t5 { background: var(--tag-5-bg); color: var(--tag-5-text); border: 1px solid var(--tag-5-border); }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  @media (max-width: 600px) {
+    .header-title { font-size: 22px; }
+    .header-subtitle { font-size: 15px; }
+    .main { padding: 28px 14px 60px; }
+    .perf-card-head { padding: 16px; }
+    .perf-card-body { padding: 16px; }
+    .content-block { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="page-header">
+  <div class="header-inner">
+    <div class="header-label">동료평가 참고자료</div>
+    <h1 class="header-title">비바웨이브 2026년 1분기 인사평가</h1>
+    <p class="header-subtitle">이재환님 업무 참고 내용</p>
+    <div class="header-notice">
+      아래 내용은 동료평가 작성 전, 이재환님의 주요 업무와 역할을 참고하실 수 있도록 정리한 자료입니다.
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<main class="main">
+
+  <!-- ── 1. 한눈에 보는 업무 구성 ── -->
+  <div class="section-title">한눈에 보는 업무 구성</div>
+
+  <div class="overview-grid">
+    <div class="overview-card c1" onclick="openCard('card1')">
+      <div class="ov-num">성과 1</div>
+      <div class="ov-title">채용 및 인재밀도 관리</div>
+      <div class="ov-weight">35%</div>
+      <div class="ov-collab">전소연, 김향지</div>
+    </div>
+    <div class="overview-card c2" onclick="openCard('card2')">
+      <div class="ov-num">성과 2</div>
+      <div class="ov-title">본사 오피스 이전</div>
+      <div class="ov-weight">30%</div>
+      <div class="ov-collab">최유리, 남예현, 이현지, 윤수빈</div>
+    </div>
+    <div class="overview-card c3" onclick="openCard('card3')">
+      <div class="ov-num">성과 3</div>
+      <div class="ov-title">전직원 정기/수습평가</div>
+      <div class="ov-weight">20%</div>
+      <div class="ov-collab">최유리</div>
+    </div>
+    <div class="overview-card c4" onclick="openCard('card4')">
+      <div class="ov-num">성과 4</div>
+      <div class="ov-title">조직문화 활성화</div>
+      <div class="ov-weight">10%</div>
+      <div class="ov-collab">최유리</div>
+    </div>
+    <div class="overview-card c5" onclick="openCard('card5')">
+      <div class="ov-num">성과 5</div>
+      <div class="ov-title">정기 근로감독</div>
+      <div class="ov-weight">5%</div>
+      <div class="ov-collab">전소연</div>
+    </div>
+  </div>
+
+  <!-- ── 2. 주요 업무 영역 (아코디언) ── -->
+  <div class="section-title">주요 업무 영역 — 세부 내용</div>
+
+  <div class="perf-list">
+
+    <!-- 성과 1 -->
+    <div class="perf-card open" id="card1">
+      <div class="perf-card-head" onclick="toggleCard('card1')">
+        <div class="perf-badge pb1">1</div>
+        <div class="perf-head-info">
+          <div class="perf-head-title">채용 및 인재밀도 관리</div>
+          <div class="perf-head-meta">
+            <span class="perf-weight-tag">가중치 35%</span>
+            <span class="perf-collab-tag">협업: 전소연, 김향지</span>
+          </div>
+        </div>
+        <div class="accordion-toggle">▾</div>
+      </div>
+      <div class="perf-card-body">
+        <div class="content-block-label">주요 업무</div>
+        <div class="content-block">1/ 입사 후 현재까지 (25.02~26.03)
+- 채용 : 56명 (리더급 10명 포함)
+- 퇴직 : 46명
+
+2/ 채용 및 퇴직 리드타임 단축 노력
+- 26년 채용 : 평균 54.4일
+- 26년 아웃보딩 : 평균 20.5일
+*이전 데이터가 없어 비교평가는 어려우나 향후 데이터 관리하며 개선 예정
+
+3/ 핵심/우수인재에 대한 전략적 리텐션 프로그램 기획/운영</div>
+        <div class="collab-section">
+          <span class="collab-label">협업 동료</span>
+          <span class="collab-chip">전소연</span>
+          <span class="collab-chip">김향지</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 성과 2 -->
+    <div class="perf-card open" id="card2">
+      <div class="perf-card-head" onclick="toggleCard('card2')">
+        <div class="perf-badge pb2">2</div>
+        <div class="perf-head-info">
+          <div class="perf-head-title">본사 오피스 이전 <span style="font-size:12px;font-weight:400;color:var(--text-muted)">(25.04~25.08)</span></div>
+          <div class="perf-head-meta">
+            <span class="perf-weight-tag">가중치 30%</span>
+            <span class="perf-collab-tag">협업: 최유리, 남예현, 이현지, 윤수빈</span>
+          </div>
+        </div>
+        <div class="accordion-toggle">▾</div>
+      </div>
+      <div class="perf-card-body">
+        <div class="content-block-label">주요 업무</div>
+        <div class="content-block">- 매물 탐색, 답사 및 계약
+- TF 구성 (공덕특공대 : 최유리/남예현/이현지/윤수빈)
+- 인테리어 및 이전 업체 비딩/선정
+- 인테리어 공사 현장 모니터링 및 각종 의사 결정 지원
+- 합정 본관 및 신관 계약 종료 및 철거
+- 타임라인 오차 없이 업무 공백 최소화하여 오피스 이전 완료</div>
+        <div class="collab-section">
+          <span class="collab-label">협업 동료</span>
+          <span class="collab-chip">최유리</span>
+          <span class="collab-chip">남예현</span>
+          <span class="collab-chip">이현지</span>
+          <span class="collab-chip">윤수빈</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 성과 3 -->
+    <div class="perf-card open" id="card3">
+      <div class="perf-card-head" onclick="toggleCard('card3')">
+        <div class="perf-badge pb3">3</div>
+        <div class="perf-head-info">
+          <div class="perf-head-title">전직원 정기/수습평가</div>
+          <div class="perf-head-meta">
+            <span class="perf-weight-tag">가중치 20%</span>
+            <span class="perf-collab-tag">협업: 최유리</span>
+          </div>
+        </div>
+        <div class="accordion-toggle">▾</div>
+      </div>
+      <div class="perf-card-body">
+        <div class="content-block-label">주요 업무</div>
+        <div class="content-block">2025년 정기/수습평가 진행
+
+- 정기평가 : 월 평균 약 5명
+- 수습평가 : 월 평균 약 3명
+이에 따른 전직원 면담 (전체 면담 대상자 중 약 80% 진행)</div>
+        <div class="content-block-label" style="margin-top:16px;">업무 의의</div>
+        <div class="content-block">해당 업무의 경우, 성과 및 실적을 정량적으로 작성하기는 어려워 정성적인 측면과 의미를 중심으로 작성하겠습니다.
+: 연봉협상까지 포함하면 리소스와 품이 매우 많이 들어가는 연중 업무였지만,
+입사 첫 해 거의 대부분의 직원 분들과 대면하여 면담하면서 관계를 만들 수 있었고, 덕분에 빠르게 조직에 적응할 수 있었던 것 같습니다.
+면담 과정에서 직원 분들의 니즈, 불만, 건의사항 등을 들으며 이에 따른 적절한 ntd 및 유효한 인사적 결정들을 내릴 수 있었다고 생각합니다.</div>
+        <div class="collab-section">
+          <span class="collab-label">협업 동료</span>
+          <span class="collab-chip">최유리</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 성과 4 -->
+    <div class="perf-card open" id="card4">
+      <div class="perf-card-head" onclick="toggleCard('card4')">
+        <div class="perf-badge pb4">4</div>
+        <div class="perf-head-info">
+          <div class="perf-head-title">조직문화 활성화</div>
+          <div class="perf-head-meta">
+            <span class="perf-weight-tag">가중치 10%</span>
+            <span class="perf-collab-tag">협업: 최유리</span>
+          </div>
+        </div>
+        <div class="accordion-toggle">▾</div>
+      </div>
+      <div class="perf-card-body">
+        <div class="content-block-label">주요 업무</div>
+        <div class="content-block">- 런치앤런 신규 기획 및 런칭/운영(25년 6회, 26년 3회)
+> 만족도(긍정율) 평균 91.5/100점
+- 랜덤런치, 작은도서관 및 송년회 등 시즌에 맞는 사내 이벤트 기획/운영
+- 25년 9월 리더워크샵 기획 및 진행/운영 (@곤지암리조트)</div>
+        <div class="collab-section">
+          <span class="collab-label">협업 동료</span>
+          <span class="collab-chip">최유리</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 성과 5 -->
+    <div class="perf-card open" id="card5">
+      <div class="perf-card-head" onclick="toggleCard('card5')">
+        <div class="perf-badge pb5">5</div>
+        <div class="perf-head-info">
+          <div class="perf-head-title">정기 근로감독</div>
+          <div class="perf-head-meta">
+            <span class="perf-weight-tag">가중치 5%</span>
+            <span class="perf-collab-tag">협업: 전소연</span>
+          </div>
+        </div>
+        <div class="accordion-toggle">▾</div>
+      </div>
+      <div class="perf-card-body">
+        <div class="content-block-label">주요 업무</div>
+        <div class="content-block">25년 6월 고용노동부 정기 근로감독 완료
+: 과태료 없음, 지적사항 5가지에 대해 100% 시정하여 종료</div>
+        <div class="collab-section">
+          <span class="collab-label">협업 동료</span>
+          <span class="collab-chip">전소연</span>
+        </div>
+      </div>
+    </div>
+
+</div><!-- /perf-list -->
+
+</main>
+
+<footer class="page-footer">
+  비바웨이브 2026년 1분기 인사평가 · 이재환님 업무 참고 자료 · 동료평가 전용 참고 문서
+</footer>
+
+<script>
+  function toggleCard(id) {
+    const card = document.getElementById(id);
+    card.classList.toggle('open');
+  }
+
+  function openCard(id) {
+    const card = document.getElementById(id);
+    if (!card.classList.contains('open')) {
+      card.classList.add('open');
+    }
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+
+</body>
+</html>
